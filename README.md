@@ -13,10 +13,10 @@
 
 #### npm
 
-`npm install linxlAddress --save`
+`npm install linxladdress --save`
 
 ```js
-  import linxlAddress from 'linxlAddress';
+  import linxlAddress from 'linxladdress';
 
   console.log(linxlAddress('18300000000赵三广东广州天河林和中路11号'))
 ```
