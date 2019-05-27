@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vectorzero/linxlAddress.git"
+    "url": "git+https://github.com/vectorzero/linxl-address.git"
   },
   "keywords": [
 	"地址",
@@ -18,8 +18,8 @@
   ],
   "author": "vectorzero",
   "bugs": {
-    "url": "https://github.com/vectorzero/linxlAddress/issues"
+    "url": "https://github.com/vectorzero/linxl-address/issues"
   },
-  "homepage": "https://github.com/vectorzero/linxlAddress#readme",
+  "homepage": "https://github.com/vectorzero/linxl-address#readme",
   "license": "MIT"
 }
