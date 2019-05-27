@@ -1,6 +1,6 @@
 {
   "name": "linxladdress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Separate a string containing name, address and phone number.",
   "main": "linxlAddress.js",
   "scripts": {
