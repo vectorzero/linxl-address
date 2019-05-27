@@ -455,9 +455,9 @@
     }
 
     if (_fullAddress) { // 地址
-      _province = jungleAddress(provinceList, _fullAddress);
-      _city = jungleAddress(cityList, _fullAddress);
-      _county = jungleAddress(countyList, _fullAddress);
+      _province = jungleAddress(provinceList, _fullAddress, '省');
+      _city = jungleAddress(cityList, _fullAddress, '市');
+      _county = jungleAddress(countyList, _fullAddress, '区');
       let tempIndex = '';
       if (_fullAddress.includes('区')) {
         tempIndex = _fullAddress.lastIndexOf('区')
@@ -518,12 +518,10 @@
       }
       return resultName;
     }
-
-    function jungleAddress(list, fullAddress) {
+    function jungleAddress(list, fullAddress, type) {
       let resultAddress = '';
       list.forEach(item => {
         if (fullAddress.includes(item.substring(0, 2))) {
-          let tempIndex = fullAddress.lastIndexOf(item);
           resultAddress = item;
         }
       });
