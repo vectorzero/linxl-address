@@ -1,6 +1,6 @@
 {
   "name": "linxladdress",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Separate a string containing name, address and phone number.",
   "main": "linxlAddress.js",
   "scripts": {
@@ -11,10 +11,10 @@
     "url": "git+https://github.com/vectorzero/linxl-address.git"
   },
   "keywords": [
-	"地址",
-	"解析地址",
-	"分辨地址",
-	"address"
+    "地址",
+    "解析地址",
+    "分辨地址",
+    "address"
   ],
   "author": "vectorzero",
   "bugs": {
