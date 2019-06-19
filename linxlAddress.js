@@ -1,8 +1,8 @@
-(function(global, factory) {
+(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) : (global.linxlAddress = factory());
-})(this, function() {
-  const linxlAddress = function(mixinStr) {
+})(this, function () {
+  const linxlAddress = function (mixinStr) {
     let str = mixinStr.replace(/[\，|\。|\ |\,]/g, "");
     let _province = '',
       _city = '',
@@ -475,6 +475,10 @@
               temp_county_list.forEach(c => {
                 if (c.includes(_county)) {
                   _county = c;
+                } else {
+                  if (_fullAddress.includes(c)) {
+                    _county = c;
+                  }
                 }
               })
             }
@@ -488,7 +492,6 @@
               _province = item;
               _city = v;
             }
-
           }
         }
       }
