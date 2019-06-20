@@ -1,7 +1,7 @@
 /**
  * Created by linxianliang on 2019/06/20.
  * MIT License.
- * Version 1.0.3
+ * Version 1.0.4
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -477,17 +477,30 @@
           for (let v in areaJson[item]) {
             if (v === _city) {
               let temp_county_list = areaJson[item][_city];
-              temp_county_list.forEach(c => {
-                if (c.includes(_county) && _county) {
-                  _county = c;
+              for (let i = 0; i < temp_county_list.length; i++) {
+                if (temp_county_list[i].includes(_county) && _county) {
+                  _county = temp_county_list[i];
                 } else {
-                  if (_fullAddress.includes(c)) {
-                    _county = c;
+                  if (_fullAddress.includes(temp_county_list[i])) {
+                    _county = temp_county_list[i];
+                    console.log(11, _county)
+                    break;
                   } else {
                     _county = '';
                   }
                 }
-              })
+              }
+              // temp_county_list.forEach(c => {
+              //   if (c.includes(_county) && _county) {
+              //     _county = c;
+              //   } else {
+              //     if (_fullAddress.includes(c)) {
+              //       _county = c;
+              //     } else {
+              //       _county = '';
+              //     }
+              //   }
+              // })
             }
           }
         }
