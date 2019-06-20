@@ -1,3 +1,8 @@
+/**
+ * Created by linxianliang on 2019/06/20.
+ * MIT License.
+ * Version 1.0.3
+ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) : (global.linxlAddress = factory());
@@ -473,11 +478,13 @@
             if (v === _city) {
               let temp_county_list = areaJson[item][_city];
               temp_county_list.forEach(c => {
-                if (c.includes(_county)) {
+                if (c.includes(_county) && _county) {
                   _county = c;
                 } else {
                   if (_fullAddress.includes(c)) {
                     _county = c;
+                  } else {
+                    _county = '';
                   }
                 }
               })
@@ -557,7 +564,13 @@
       address: _address,
       region: _region
     }
-
+    let emptyProp = [];
+    for(let x in mixinObject) {
+      if (!mixinObject[x]) {
+        emptyProp.push(x)
+      }
+    }
+    mixinObject.emptyProp = emptyProp;
     return mixinObject
   }
   return linxlAddress
