@@ -5,7 +5,7 @@
 ### base 
 
 ``` html
-  <script src="linxlAddress.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/vectorzero/linxl-address@1.0/linxlAddress.min.js"></script>
   <script type="text/javascript">
     console.log(linxlAddress('18300000000赵三广东广州天河林和中路11号'))
   </script>
